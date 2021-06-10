@@ -1,4 +1,10 @@
 // Imports
+require('dotenv').config()
+const mongoose = require('mongoose')
+const url = process.env.url
+
+mongoose.connect(url)
+
 const express = require('express')
 const app = express()
 const port = 3000

@@ -1,5 +1,6 @@
-let list = [];
+require('dotenv').config()
 
+let list = [];
 
 const add = () => {
 const name = document.querySelector('#nameInput').value;
