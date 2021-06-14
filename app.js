@@ -1,9 +1,9 @@
 // Imports
 require('dotenv').config()
-const mongoose = require('mongoose')
+
 const url = process.env.url
 
-mongoose.connect(url)
+console.log(`The database is ${url}`)
 
 const express = require('express')
 const app = express()
@@ -24,12 +24,15 @@ app.get('', (req, res) => {
     res.render('index')
 })
 
-app.get('/levi', (req, res) => {
-    res.render('levi')
-})
-
 app.get('/about', (req, res) => {
     res.render('about')
+})
+
+app.get('/person-form', (req, res) => {
+    res.render('person-form')
+})
+app.get('/contact', (req, res) => {
+    res.render('contact')
 })
 
 //  Listen on port 3000

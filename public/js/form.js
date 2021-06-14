@@ -1,5 +1,3 @@
-require('dotenv').config()
-
 let list = [];
 
 const add = () => {
@@ -16,6 +14,9 @@ const person  = {
     list.push(person);
     listData();
     cleanData();
+
+    person = new Person(name, age, email, date)
+    console.log(person)
 }
 
 const listData = () => {

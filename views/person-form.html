@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Register a person</title>
+</head>
+<body>
+    <nav id="menu">
+        <ul>
+          <li id="home"><a href="./"><img id="homeImg" src="./img/home.png"></a></li>
+          <li><a href="about">About</a></li>
+          <li><a href="contact">Contact</a></li>
+          <li><a href="person-form">Register a person</a></li>
+        </ul>
+      </nav>
+      
+    <div class="container">
+        <form>
+            <div class="form-group">
+                <label for="nameInput">Name:</label>
+                <input id="nameInput" placeholder="Your Name" />
+            </div>
+            <div class="form-group">
+                <label for="ageInput">Age:</label>
+                <input id="ageInput" placeholder="Your age" />
+            </div>
+            <div class="form-group">
+                <label for="dateInput">Birth:</label>
+                <input type="date" id="dateInput" placeholder="Pick a date" />
+            </div>
+            <div class="form-group">
+                <label for="emailInput">Email:</label>
+                <input type="email" id="emailInput" placeholder="yourEmail@email.com" />
+            </div>
+            <button type="button" class="addButton" onclick="add()">Submit</button>
+            <button type="button" class="clearButton" onclick="cleanList()">Clean</button>
+        </form>
+        <hr>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Birth</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody id="list"></tbody>
+        </table>
+    </div>
+
+</body>
+<script src="js/form.js"></script>
+<script src="js/models/Person.js">
+var person = new Person('Andrey', 17, 'deytutos@gmail.com', new Date())
+console.log(person)
+</script>
+</html>
